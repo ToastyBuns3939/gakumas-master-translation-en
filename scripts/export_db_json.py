@@ -14,7 +14,7 @@ def path_normalize_for_pk(path_str: str) -> str:
 
 def check_need_export(v: str) -> bool:
     if not v:
-        return False
+        return True
 
     # Define the allowed character set
     allowed_chars = string.ascii_letters + string.digits + string.punctuation + " "
@@ -24,7 +24,7 @@ def check_need_export(v: str) -> bool:
         if char not in allowed_chars:
             return True
 
-    return False
+    return True
 
 
 def collect_translatable_text(data_obj, primary_keys):
