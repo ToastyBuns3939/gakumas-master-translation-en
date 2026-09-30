@@ -390,7 +390,7 @@ def save_json(data: list, name: str):
 
     # Write JSON files
     os.makedirs('./gakumasu-diff/json', exist_ok=True)
-    with open(f'gakumasu-diff/json/{name}.json', 'w', encoding='utf-8') as f:
+    with open(f'gakumasu-diff/json/{name}.json', 'w', encoding='utf-8', newline='\n') as f:
         json.dump(result, f, ensure_ascii=False, indent=4)
     return f'gakumasu-diff/json/{name}.json'
 
